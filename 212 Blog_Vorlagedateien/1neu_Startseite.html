@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Mein persönlicher Blog</title>
+  <!-- Bootstrap einbinden (CDN) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+ <!-- 🎵 Musiksteuerung -->
+  <audio id="bg-music" loop>
+    <source src="audio/1 (3).mp3" type="audio/mpeg">
+  </audio>
+  
+  <div class="text-center my-4">
+    <button id="music-btn" class="btn btn-outline-primary">🎵 Musik starten</button>
+  </div>
+  
+  <script>
+  const music = document.getElementById('bg-music');
+  const btn = document.getElementById('music-btn');
+  let playing = false;
+  
+  btn.addEventListener('click', () => {
+    if (!playing) {
+      music.play();
+      btn.textContent = "⏸️ Musik pausieren";
+      playing = true;
+    } else {
+      music.pause();
+      btn.textContent = "🎵 Musik starten";
+      playing = false;
+    }
+  });
+  </script>
+
+
+
+<!-- Header -->
+<header class="bg-primary text-white text-center py-5">
+  <h1>🎀 𝓣𝓪𝓶𝓲`𝓼  𝓑𝓵𝓸𝓰 💋 </h1> 
+</header>
+
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="essensgewohnheiten.html">Tägliche Essensgewohnheiten</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fitnessprogramm.html">Mein Fitness-Programm</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</nav>
+
+<!-- Hauptinhalt -->
+<div class="container mt-4">
+  <h2>𝐖𝐢𝐥𝐥𝐤𝐨𝐦𝐦𝐞𝐧!</h2>
+  <p>
+    <!-- Kurze Begrüßung oder Einleitungstext einfügen -->
+    Hier teile ich mit euch meine täglichen Routinen und Updates + ihr erfahrt spannende Sachen!
+  </p>
+</div>
+
+
+<!-- Bilderkarussell -->
+<div id="bilderKarussell" class="carousel slide container mt-4" data-ride="carousel">
+    <h3 class="mb-3">Bildergalerie</h3>
+    <!-- Indikatoren -->
+    <ol class="carousel-indicators">
+      <li data-target="#bilderKarussell" data-slide-to="0" class="active"></li>
+      <li data-target="#bilderKarussell" data-slide-to="1"></li>
+      <li data-target="#bilderKarussell" data-slide-to="2"></li>
+    </ol>
+    <!-- Bilder -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="bilder/Herbst.jpg" class="d-block w-100" alt="Herbst">
+      </div>
+      <div class="carousel-item">
+        <img src="bilder/Winter.jpg" class="d-block w-100" alt="Winter">
+      </div>
+      <div class="carousel-item">
+        <img src="bilder/Frühling.jpg" class="d-block w-100" alt="Frühling">
+      </div>
+      <div class="carousel-item">
+        <img src="bilder/fensterfolie-landschaft-im-sommer.webp" class="d-block w-100" alt="Sommer">
+      </div>
+    </div>
+    <!-- Steuerung -->
+    <a class="carousel-control-prev" href="#bilderKarussell" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Vorheriges</span>
+    </a>
+    <a class="carousel-control-next" href="#bilderKarussell" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Nächstes</span>
+    </a>
+  </div>
+    
+  </script>
+</body>
+</html>
